@@ -1,16 +1,5 @@
 # Transformer for TSP
 
-## Future Directions
-
-### Upcoming Enhancements:
-- **Mamba**: Exploring its potential for sequence modeling.
-- **Titans**: While not directly applicable to this problem, it may be relevant for future research.
-- **Reinforcement Learning (RL)**: Investigating RL-based approaches for TSP.
-- **Fusion Models**: Integrating image-based input and output representations.
-
-### Long-Term Research Goals:
-- **Prime Number Optimization**: Investigating transformer-based approaches for prime number-related problems.
-- **Other Mathematical Challenges**: Extending the methodology to other complex mathematical problems.
 
 ## Project Scope
 
@@ -20,9 +9,12 @@ This project does not aim to provide an optimal solution to TSP. Instead, it ser
 
 ## Introduction
 
-This project explores the application of transformer models to the Traveling Salesman Problem (TSP). Designed for researchers and engineers in neural combinatorial optimization, the model is available on [GitHub](#) and [huggingface space](https://huggingface.co/spaces/yuda-ai/TSP_Transformer), where users can experiment with it directly.
+This project explores the application of transformer models to the Traveling Salesman Problem (TSP). Designed for researchers and engineers in neural combinatorial optimization, the model is available on [GitHub](https://github.com/yuda03979/TSP_Transformer) and [huggingface space](https://huggingface.co/spaces/yuda-ai/TSP_Transformer), where users can experiment with it directly.
 
 Please note that this is a prototype built for research and experimentation rather than a fully optimized solution. Due to time and hardware constraints, performance is not maximized, but the findings remain valuable.
+
+---
+![huggingface space](./readme_images/example_space.png)
 
 ---
 
@@ -42,11 +34,9 @@ The dataset is constructed within a 10×10 grid, with each sample containing 6 p
 ### Data Augmentation
 
 To enhance generalization and robustness, the dataset underwent the following transformations:
-- **Scaling**: Each sample was scaled by a factor of 20.
-- **Shuffling**: Data points were randomly rearranged to create additional variations.
-- **Mirroring**: Resulting paths were flipped to improve generalization.
 
-*Example visualizations of training vs. test data:*\
+- **Sorting**: Data points were sorted to make it easy for the model.
+- **Mirroring**: Resulting paths were flipped to improve generalization.
 
 ---
 
@@ -64,7 +54,7 @@ the model is > 15M parameters.
   - **Hidden dimension (`d_model`) of 512**
   - **MLP inner dimension of 4096**
 
-The overall architecture draws inspiration from **Gemma** and other modern transformer variants.
+The overall architecture draws inspiration from **Gemma**.
 
 ---
 
@@ -77,6 +67,8 @@ The model was trained with the following hyperparameters:
 - **Epochs**: 12
 
 *Training process visualization:*\
+![test loss in TensorBoard](./readme_images/tensorboard_test.png)
+![train loss in TensorBoard](./readme_images/tensorboard_train.png)
 
 ---
 
@@ -89,4 +81,17 @@ The model demonstrates promising performance but has not been explicitly benchma
 ### constant n_points
 
 now the model is only work on 6 points. but the code also support dynamic approach, but needs more computations.
+
+## Future Directions
+
+### Upcoming Enhancements:
+- **Mamba**: Exploring its potential for sequence modeling.
+- **Titans**: While not directly applicable to this problem, it may be relevant for future research.
+- **Reinforcement Learning (RL)**: Investigating RL-based approaches for TSP.
+- **Fusion Models**: Integrating image-based input and output representations.
+
+### Long-Term Research Goals:
+- **Prime Number Optimization**: Investigating transformer-based approaches for prime number-related problems.
+- **Other Mathematical Challenges**: Extending the methodology to other complex mathematical problems.
+---
 
