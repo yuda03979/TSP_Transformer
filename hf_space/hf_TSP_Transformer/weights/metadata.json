@@ -1,0 +1,64 @@
+{
+    "config_datasets": {
+        "len_dataset_train": 100000,
+        "len_dataset_test": 50000,
+        "board_size": [
+            10,
+            10
+        ],
+        "min_n_points": 6,
+        "max_n_points": 6,
+        "train_datafile_path": "train_data.txt",
+        "test_datafile_path": "test_data.txt",
+        "train_len_data": 2000000,
+        "test_len_data": 96000
+    },
+    "config_tokenizer": {
+        "board_size": [
+            10,
+            10
+        ],
+        "special_tokens": [
+            "mask",
+            "sop",
+            "eop"
+        ],
+        "vocab_size": 103,
+        "mask_token": "mask",
+        "sop_token": "sop",
+        "eop_token": "eop"
+    },
+    "config_exp": {
+        "model_base_name": "TSP_transformers",
+        "global_folder": "pretrained_TSP_transformers",
+        "exp_name": "try14",
+        "exp_folder": "try14",
+        "weights_folder": "_weights",
+        "images_folder": "_images",
+        "trainer_folder": "_trainer",
+        "metadata_file": "metadata.json",
+        "tensorboard_folder": "tensorboard_logs",
+        "logs_txt_file": "logs.txt"
+    },
+    "config_train": {
+        "batch_size": 1024,
+        "lr": 1e-06,
+        "num_epochs": 50
+    },
+    "config_model": {
+        "vocab_size": 103,
+        "board_size": [
+            10,
+            10
+        ],
+        "d_model": 512,
+        "n_layers": 2,
+        "output_dim": 100,
+        "num_heads": 4,
+        "head_dim": 128,
+        "mask": false,
+        "mlp_dim": 4096
+    },
+    "device": "mps",
+    "seq_len": 14
+}
